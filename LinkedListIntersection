@@ -1,0 +1,25 @@
+class Solution(object):
+    def getIntersectionNode(self, headA, headB):
+        """
+        :type head1, head1: ListNode
+        :rtype: ListNode
+        """
+        lenA = lenB = 0
+        currA, currB = headA, headB
+        while currA:
+            lenA += 1
+            currA = currA.next
+        while currB:
+            lenB += 1
+            currB = currB.next
+        if lenA < lenB:
+            for i in range(lenB - lenA): #"shorten" longer list
+                headB = headB.next
+        elif lenB < lenA:
+            for i in range(lenA - lenB):
+                headA = headA.next
+        currA, currB = headA, headB
+        while currB != currA:
+            currA = currA.next
+            currB = currB.next
+        return currA
