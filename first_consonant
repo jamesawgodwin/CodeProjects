@@ -1,0 +1,22 @@
+def consonant_first(text):
+
+    """Finds a list of unique words in text that start with a consonant
+        (letters that are not vowels). Note: all words are returned as
+        lowercase and are returned in no particular order.
+    """
+
+    # remove an captals
+    text = text.lower()
+    # split string into substring of words
+    textstring = text.split()
+    # initialize array to store words
+    list_words = []
+
+    for word in textstring:
+        if word[0] not in "aeiou":
+            list_words.append(word)
+    print (list_words)
+# list comprehension is shorter
+    # print([word for word in textstring if word[0] not in 'aeiou'])
+
+consonant_first("A dog is a good pet and a bear is an awful pet")
