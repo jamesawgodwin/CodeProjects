@@ -1,0 +1,15 @@
+def keys_geq_cutoff(num_dict, min_cutoff):
+
+    """Returns all the keys (as a set) from num_dict that have
+        value greater than or equal to min_cutoff.
+    """
+    
+    cutoff = set()
+    
+    for k,v in num_dict.items():
+      if v >= min_cutoff:
+         cutoff.add(k)
+    
+    print(cutoff)
+    
+keys_geq_cutoff({'Alice': 21, 'Brett': 20, 'Carlos': 31}, 21)
