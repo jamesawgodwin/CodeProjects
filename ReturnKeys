@@ -1,4 +1,4 @@
-def keys_geq_cutoff(num_dict, min_cutoff):
+def return_cutoff(num_dict, min_cutoff):
 
     """Returns all the keys (as a set) from num_dict that have
         value greater than or equal to min_cutoff.
@@ -12,4 +12,4 @@ def keys_geq_cutoff(num_dict, min_cutoff):
     
     print(cutoff)
     
-keys_geq_cutoff({'Alice': 21, 'Brett': 20, 'Carlos': 31}, 21)
+return_cutoff({'Alice': 21, 'Brett': 20, 'Carlos': 31}, 21)
